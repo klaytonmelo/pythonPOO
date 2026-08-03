@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from rich import print
 from time import sleep
 
-class Cafeteira(ABC):
+class BebidaQuente(ABC):
     def __init__(self):
         pass
 
@@ -21,15 +21,15 @@ class Cafeteira(ABC):
         return "Fervendo água a 100 graus Celcius."
 
     @abstractmethod
-
     def misturar(self):
         pass
 
+    @abstractmethod
     def servir(self):
         pass
 
 
-class Cafe(Cafeteira):
+class Cafe(BebidaQuente):
     def __init__(self):
         super().__init__()
 
@@ -40,7 +40,7 @@ class Cafe(Cafeteira):
         return "Servindo em xicara pequena."
 
 
-class Cha(Cafeteira):
+class Cha(BebidaQuente):
     def __init__(self):
         super().__init__()
 
@@ -51,7 +51,7 @@ class Cha(Cafeteira):
         return "Servindo na caneca de porcelana com limão."
 
 
-class Leite(Cafeteira):
+class Leite(BebidaQuente):
     def __init__(self):
         super().__init__()
 
